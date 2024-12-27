@@ -1,0 +1,83 @@
+body {
+    background-color: var(--background-ui-dark);
+    font-family: var(--main-google-font);
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: 2px solid blueviolet; */
+}
+:root {
+    --discord-blue: #5865F2;
+    --main-google-font:"Open Sans", serif;
+    --background-ui-dark:rgb(78, 82, 94);
+    --CssScan-ShadowBox: box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;;
+}
+
+/* Real Code Stars Here 🗣️🗣️🗣️ */
+.container {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 1rem;
+}
+.wrapper {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 1rem;
+
+    & .box {
+        width: 2rem;
+        height: 1.5rem;
+        display: grid;
+        place-items: center;
+        filter: drop-shadow(1px 2px 1px black);
+        transition: all 0.5s;
+    
+        &:hover {
+            scale: 1.2;
+            transition: all 0.5s;
+        }
+    }
+
+    .discord-icon img {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* input svg  */
+.input-svg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.input-svg img{
+    z-index: 1;
+    position: absolute;
+    width: 16px;
+    margin-right: 5px;
+}
+.input-svg input {
+    position: relative;
+    border-radius: 5px;
+    width: 12rem;
+    height: 1.5rem;
+    transition: all 0.25s;
+    padding-left: 5px;
+    border: none;
+    outline: none;
+    box-shadow: var(--CssScan-ShadowBox);
+}
+.input-svg input:focus-visible {
+    box-shadow: 0px 0px 1px 5px var(--discord-blue);
+}
+.input-svg input:focus,
+input:not(:placeholder-shown) {
+    width: 16rem;
+}
+
+
